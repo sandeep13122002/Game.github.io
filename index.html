@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css"/>
+    
+</head>
+<body onload="init()">
+    
+    <main>
+        <div id="welcomeScreen">
+         <h2 >Guess The Random Number Between 1-100</h2>
+         <img class="image"src="./imges/game.webp" alt="logo">
+         
+         
+         <section class="eventSection">
+            <p>select THE difficulty</p>
+            <div class="button-wrapper">
+                <button onclick="easymode()">Easy: 5 attemps </button>
+                <button onclick="hardmode()">hard: 10 attemps </button>
+            </div>
+          </section>
+
+        </div>
+
+      <div id="gamearea">
+         <div id="newgamebutton">
+
+        <button onclick="newgamebegin()">New Game</button>
+         </div>
+         <section>
+            <h3 id="output">your Guess</h3>
+            <input type="text"
+                id="inputbox"
+                min="1"
+                max="100"
+                placeholder="Enter your Number"
+                onchange="compareguess()"
+            />
+</section>
+
+<section class="stats">
+<div class="info">
+<p>Number of attempts made</p>
+<span id="attempt">0</span>
+</div>
+
+
+
+<div class="info">
+    <p>Number of previous attempts</p>
+    <span id="guesses">0</span>
+    </div>
+
+
+
+</section>
+
+
+
+
+
+      </div>
+
+
+
+
+      <script src="./index.js"></script>
+
+    </main>
+</body>
+</html>
